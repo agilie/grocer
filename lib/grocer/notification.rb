@@ -86,11 +86,11 @@ module Grocer
       validate_payload rescue false
     end
 
-    private
-
     def encoded_payload
       @encoded_payload ||= JSON.dump(payload_hash)
     end
+
+    private
 
     def payload_hash
       aps_hash = { }
